@@ -63,7 +63,7 @@ const AddExpense = () => {
         console.log('Expense Data:', expenseData); // Log the data being sent
 
         try {
-            const response = await axios.post('http://localhost:5001/api/expenses', expenseData, {
+            const response = await axios.post('https://expense-tracker-2ubr.onrender.com/api/expenses', expenseData, {
                 headers: {
                     Authorization: localStorage.getItem('token'), // Ensure the token is sent correctly
                 },

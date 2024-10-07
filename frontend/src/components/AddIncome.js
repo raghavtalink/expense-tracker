@@ -11,7 +11,7 @@ const AddIncome = () => {
     const handleAddIncome = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5001/api/incomes', { amount, category, incomeSource, paymentMethod }, {
+            await axios.post('https://expense-tracker-2ubr.onrender.com/api/incomes', { amount, category, incomeSource, paymentMethod }, {
                 headers: {
                     Authorization: token,
                 },

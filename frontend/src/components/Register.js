@@ -11,7 +11,7 @@ const Register = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5001/api/auth/register', { email, password });
+            const response = await axios.post('https://expense-tracker-2ubr.onrender.com/api/auth/register', { email, password });
             setMessage(response.data.message);
         } catch (error) {
             setMessage(error.response.data.message || 'Registration failed');

@@ -34,7 +34,7 @@ const SeeExpenses = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/expenses', {
+        const response = await axios.get('https://expense-tracker-2ubr.onrender.com/api/expenses', {
           headers: {
             Authorization: token,
           },

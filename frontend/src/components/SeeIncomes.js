@@ -10,7 +10,7 @@ const SeeIncomes = () => {
     useEffect(() => {
         const fetchIncomes = async () => {
             try {
-                const response = await axios.get('http://localhost:5001/api/incomes', {
+                const response = await axios.get('https://expense-tracker-2ubr.onrender.com/api/incomes', {
                     headers: {
                         Authorization: token,
                     },

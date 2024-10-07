@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   const fetchMonthlyData = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/api/expenses?startDate=${startDate}&endDate=${endDate}`);
+      const response = await fetch(`https://expense-tracker-2ubr.onrender.com/api/expenses?startDate=${startDate}&endDate=${endDate}`);
       const data = await response.json();
       setTotalExpenses(data.totalExpenses);
     } catch (error) {
@@ -24,12 +24,12 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         // Fetch total expenses
-        const expenseResponse = await fetch('http://localhost:5001/api/total-expenses');
+        const expenseResponse = await fetch('https://expense-tracker-2ubr.onrender.com/api/total-expenses');
         const expenseData = await expenseResponse.json();
         setTotalExpenses(expenseData.total);
 
         // Fetch total income
-        const incomeResponse = await fetch('http://localhost:5001/api/total-income');
+        const incomeResponse = await fetch('https://expense-tracker-2ubr.onrender.com/api/total-income');
         const incomeData = await incomeResponse.json();
         setTotalIncome(incomeData.total);
       } catch (error) {
